@@ -7,8 +7,8 @@ const jobs: Job[] = [
   {
     title: "Media Buyer, SEO Analyst",
     company: "Reflect Digital Agency",
-    period: "June 2024 – Today",
-    desc: "Produced creative solutions for ADHD communities (1 M on IG, 300 K on TikTok).",
+    period: "June 2024 – May 2025",
+    desc: "Launched targeted advertising campaigns and managed performance remotely.",
   },
   {
     title: "Video Editor & Content Creator",
@@ -32,7 +32,7 @@ const jobs: Job[] = [
     title: "AI Engineer (remote)",
     company: "Trueface, Los Angeles",
     period: "Jun 2020 – Oct 2021",
-    desc: "Collected and annotated data for machine-learning model training.",
+    desc: "Collected and annotated high-precision computer vision data for core machine-learning model training. Contributed to workflows powering Trueface's advanced facial recognition, biometric identity verification, and object detection software widely adopted across security and enterprise sectors (<a href=\"https://www.biometricupdate.com/companies/trueface\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-accent underline hover:text-accent/80\">Biometric Update Source</a>, <a href=\"https://bigbear.ai/solutions/computer-vision-and-digital-identity/trueface-identity-verification/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-accent underline hover:text-accent/80\">BigBear.ai Impact</a>).",
   },
 
   /*— New LinkedIn experiences —*/
@@ -46,7 +46,7 @@ const jobs: Job[] = [
     title: "Team Lead (Data Labeling)",
     company: "Trueface, Los Angeles",
     period: "Mar 2019 – Jul 2019",
-    desc: "Managed and coached a team responsible for data classification and annotation.",
+    desc: "Managed, coached, and optimized a specialized data classification and annotation team. Ensured rigorous training datasets met top-tier benchmark standards for NIST-certified computer vision models (<a href=\"https://www.biometricupdate.com/companies/trueface\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-accent underline hover:text-accent/80\">NIST Benchmarks</a>).",
   },
   {
     title: "Freelance Video Editor / Director",
@@ -71,7 +71,10 @@ export default function Experience() {
                   {j.title} <span className="text-slate-400">@ {j.company}</span>
                 </h4>
                 <time className="text-xs text-slate-400">{j.period}</time>
-                <p className="mt-2 text-slate-300">{j.desc}</p>
+                <p 
+                  className="mt-2 text-slate-300 [&>a]:text-accent [&>a]:underline"
+                  dangerouslySetInnerHTML={{ __html: j.desc }}
+                />
               </div>
             </li>
           ))}

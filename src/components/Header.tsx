@@ -20,11 +20,7 @@ export default function Header() {
           ))}
 
           {/* lien Projects vers /projects */}
-          <li>
-            <a href="/projects" className="transition hover:text-accent">
-              Projects
-            </a>
-          </li>
+          
         </ul>
 
         <button className="md:hidden">
